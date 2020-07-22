@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lorem Wipsum</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+     <!-- Font -->
+     <link href="https://fonts.googleapis.com/css?family=Quicksand rel="stylesheet">
+     <!-- Icon -->
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.0/css/all.css">
+    <!-- style -->
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Form run -->
+    <script src="https://sdk.form.run/js/v2/formrun.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <!-- ヘッダー -->
+        <header>
+            <!-- PC用メニュー -->
+            <nav class="pc-nav">
+                <ul>
+                    <li class="pc-list"><a href="#">Home</a></li>
+                    <li class="pc-list"><a href="#service">Service</a></li>
+                    <li class="pc-list"><a href="#portfolio">Portfolio</a></li>
+                    <li class="pc-list"><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- スマホ用メニュー -->
+            <div id="nav-drawer">
+                <input id="nav-input" type="checkbox" class="nav-unshown">
+                <label id="nav-open" for="nav-input">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+                <label class="nav-unshown" id="nav-close" for="nav-input"></label>
+                <div id="nav-content">
+                    <nav class="sp-nav">
+                        <ul>
+                            <li class="sp-list">
+                                <a href="#" onclick="check('nav-input');">Home</a>
+                            </li>
+                            <li class="sp-list">
+                                <a href="#service" onclick="check('nav-input');">Service</a>
+                            </li>
+                            <li class="sp-list">
+                                <a href="#portfolio" onclick="check('nav-input');">Portfolio</a>
+                            </li>
+                            <li class="sp-list">
+                                <a href="#contact" onclick="check('nav-input');">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <!-- クリック用ファンクション -->
+                <script type="text/javascript">
+                    function check( id ) {
+                    document.getElementById( id ).checked = false;
+                    }
+                </script>
+            </div>
+        </header>
+        <!-- トップ -->
+        <div class="top">
+            <h1 class="top-title">Portfolio Web site</h1>
+            <button type="button" class="btn btn-info" onclick="location.href='#contact'">Contact me</button>
+        </div>
+        <!-- メイン -->
+        <div class="main">
+            <!-- サービス -->
+            <div class="svc-box container-fluid">
+                <h2 class="svc-h" id="service">Service</h2>
+                <div class="row">
+                    <div class="s-item col-md-3">
+                        <i class="fas fa-hands-helping"></i>
+                        <p class="s-title">Direction</p>
+                        <p class="explain">サイト制作を始める際には事前にお客様のご要望をお聞かせいただきます。お客様のご意向をしっかりと伺った上で、最適なWebサイトを制作いたします。</p>
+                        <!-- <p>ディレクション</p> -->
+                    </div>    
+                    <div class="s-item col-md-3">
+                        <i class="fas fa-code"></i>
+                        <p class="s-title">Cording</p>
+                        <p class="explain">頂いたデザインデータを元にコーディングを行います。複数のページからなるWebサイトから、1ページ完結のLP(ランディングページ)まで様々なサイトの制作を承ります。</p>
+                        <!-- <p>コーディング</p> -->
+                    </div>    
+                    <div class="s-item col-md-3">
+                        <i class="fas fa-mobile-alt"></i>
+                        <p class="s-title">Responsive</p>
+                        <p class="explain">PC向けだけではなく、スマートフォン向けの表示が行えるようなサイト作りも対応いたします。どのようなデバイスに対応させるかは事前にご相談させていただきます。</p>
+                        <!-- <p>レスポンシブ対応</p> -->
+                    </div>
+                    <div class="s-item col-md-3">
+                        <i class="fas fa-tools"></i>
+                        <p class="s-title">Maintenance</p>
+                        <p class="explain">サイト制作が終わった後も、細かい部分の微修正や古い情報の更新などご要望に応じて対応いたします。</p>
+                        <!-- <p>メンテナンス</p> -->
+                    </div> 
+                </div>
+                <!-- <i class="fab fa-html5"></i>
+                <i class="fab fa-css3-alt"></i>
+                <i class="fab fa-bootstrap"></i>
+                <i class="fab fa-php"></i>
+                <i class="fab fa-js-square"></i>
+                <i class="fab fa-python"></i> -->
+            </div>
+            <!-- ポートフォリオ一覧 -->
+            <div class="ptf-box container-fluid">
+                <h2 class="ptf-h" id="portfolio">Portfolio</h2>
+                <div class="row">
+                    <!-- サンプルサイト -->
+                    <div class="col-md-4">
+                        <div class="card px-md-5 py-md-3">
+                            <a data-toggle="modal" data-target="#ptf1"><img class="ptf-img" src="./images/thumbnail_01.png" alt="ポートフォリオ1"></a>
+                            <div class="row">
+                                <div class="col-8 text-right">
+                                    <h3 class="ptf-name">サンプルサイト1</h3>
+                                </div>    
+                                <!-- モーダルボタン -->
+                                <div class="col-4  text-right">
+                                    <button  type="button" class="ptf-btn btn btn-dark mb-12" data-toggle="modal" data-target="#ptf1">表示</button>
+                                </div>
+                            </div>
+
+                            <!-- ボタン・リンククリック後に表示される画面の内容 -->
+                            <div class="modal fade" id="ptf1" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-body">
+                                            <img class="modal-img" src="./images/portfolio_01.png" alt="サンプルサイト">
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-light" data-dismiss="modal">閉じる</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+                    <!-- コーポレートサイト -->
+                    <div class="col-md-4">
+                        <div class="card px-md-5 py-md-3">
+                            <a data-toggle="modal" data-target="#ptf2"><img class="ptf-img" src="./images/thumbnail_02.png" alt="ポートフォリオ2"></a>
+                            <div class="row">
+                                <div class="col-8 text-right">
+                                    <h3 class="ptf-name">サンプルサイト2</h3>
+                                </div>    
+                                <!-- モーダルボタン -->
+                                <div class="col-4 text-right">
+                                    <button  type="button" class="ptf-btn btn btn-dark mb-12" data-toggle="modal" data-target="#ptf2">表示</button>
+                                </div>
+                            </div>
+
+                            <!-- ボタン・リンククリック後に表示される画面の内容 -->
+                            <div class="modal fade" id="ptf2" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-body">
+                                            <img class="modal-img" src="./images/portfolio_02.png" alt="サンプルコーポレートサイト">
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-light" data-dismiss="modal">閉じる</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+                    <!-- ポートフォリオサイト -->
+                    <div class="col-md-4">
+                        <div class="card px-md-5 py-md-3">
+                            <a data-toggle="modal" data-target="#ptf3"><img class="ptf-img" src="./images/thumbnail_03.png" alt="ポートフォリオ3"></a>
+                            <div class="row">
+                                <div class="col-8  text-right">
+                                    <h3 class="ptf-name">ポートフォリオサイト</h3>
+                                </div>    
+                                <!-- モーダルボタン -->
+                                <div class="col-4  text-right">
+                                    <button  type="button" class="ptf-btn btn btn-dark mb-12" data-toggle="modal" data-target="#ptf3">表示</button>
+                                </div>
+                            </div>
+
+                            <!-- ボタン・リンククリック後に表示される画面の内容 -->
+                            <div class="modal fade" id="ptf3" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-body">
+                                            <img class="modal-img" src="./images/portfolio_03.png" alt="ポートフォリオサイト">
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-light" data-dismiss="modal">閉じる</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+            <!-- コンタクトフォーム -->
+            <!-- <div class="cnt-box">
+                <h2 class="cnt-h" id="contact">Contact</h2>
+                <form class="cnt-form" action="">
+                    <p>お名前(必須)</p>
+                    <input type="text" name="name" id="name" placeholder="お名前">
+                    <p>メールアドレス(必須)</p>
+                    <input type="email" name="email" id="email" placeholder="メールアドレス">
+                    <p>貴社名</p>
+                    <input type="text" name="conpany" id="conpany" placeholder="貴社名">
+                    <p>お問い合わせ内容</p>
+                    <textarea name="message" id="message" cols="70" rows="10" placeholder="お問い合わせ内容"></textarea>
+                    <br>
+                    <input class="submit btn btn-info"  type="submit" value="送信">
+                </form>
+            </div> -->
+
+            <!-- Form Run -->
+            <!-- class, action, methodは変更不可 -->
+            <div class="cnt-box">
+                <h2 class="cnt-h" id="contact">Contact</h2>
+                <form class="formrun cnt-form" action="https://form.run/api/v1/r/3gqoibpzaig5myfjutw94rt5" method="post">
+                    <div>
+                    <label>お名前 [必須]</label>
+                    <br>
+                    <input name="お名前" type="text" placeholder="お名前" data-formrun-required>
+                    <div data-formrun-show-if-error="お名前">お名前を正しく入力してください</div>
+                    </div>
+                
+                    <div>
+                    <label>メールアドレス [必須]</label>
+                    <br>
+                    <input name="メールアドレス" type="text" data-formrun-type="email" placeholder="メールアドレス" data-formrun-required>
+                    <div data-formrun-show-if-error="メールアドレス">メールアドレスを正しく入力してください</div>
+                    </div>
+                
+                    <div>
+                    <label>お問い合わせ [必須]</label>
+                    <br>
+                    <textarea name="お問い合わせ" cols="70" rows="10" placeholder="お問い合わせ内容" data-formrun-required></textarea>
+                    <div data-formrun-show-if-error="お問い合わせ">お問い合わせ入力してください</div>
+                    </div>
+                
+                    <div>
+                    <label>個人情報利用同意 [必須]</label>
+                    <input type="checkbox" name="個人情報利用同意" data-formrun-required>
+                    <div data-formrun-show-if-error="個人情報利用同意">同意してください</div>
+                    </div>
+                
+                    <!-- ボット投稿をブロックするためのタグ -->
+                    <div class="_formrun_gotcha">
+                    <style media="screen">._formrun_gotcha {position:absolute!important;height:1px;width:1px;overflow:hidden;}</style>
+                    <label for="_formrun_gotcha">If you are a human, ignore this field</label>
+                    <input type="text" name="_formrun_gotcha" id="_formrun_gotcha" tabindex="-1">
+                    </div>
+                    <button class="submit btn btn-info" type="submit" data-formrun-error-text="未入力の項目があります" data-formrun-submitting-text="送信中...">送信</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- フッター -->
+        <footer>
+            <p class="copy-text">
+                Copyright&copy; - <a href="#">Lorem Wipsum</a> All Rights Reserved.
+            </p>
+        </footer>
+    </div>
+
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>
