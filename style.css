@@ -150,7 +150,7 @@ header{
 
 /* トップ */
 .top{
-    background-image: url(/images/backimg5.jpg);
+    background-image: url(backimg.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
